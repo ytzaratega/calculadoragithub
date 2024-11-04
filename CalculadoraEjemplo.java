@@ -14,7 +14,7 @@ package calculadora;
  * 
  * @author Yudi Zarate
  * @version 1.0
- * @since 2024-11-03
+ * @since 2024-11-04
  * @see <a href="https://docs.oracle.com/en/java/">Java Documentation</a>
  */
 public class CalculadoraEjemplo {
@@ -26,7 +26,7 @@ public class CalculadoraEjemplo {
     private double operando2;
 
     /** Resultado de la última operación realizada. */
-    private double resultado;
+    private double total;
 
     /**
      * Constructor para inicializar los operandos de la calculadora.
@@ -45,8 +45,8 @@ public class CalculadoraEjemplo {
      * @return El resultado de la suma.
      */
     public double sumar() {
-        resultado = operando1 + operando2;
-        return resultado;
+        total = operando1 + operando2;
+        return total;
     }
 
     /**
@@ -55,8 +55,8 @@ public class CalculadoraEjemplo {
      * @return El resultado de la resta.
      */
     public double restar() {
-        resultado = operando1 - operando2;
-        return resultado;
+        total = operando1 - operando2;
+        return total;
     }
 
     /**
@@ -65,8 +65,8 @@ public class CalculadoraEjemplo {
      * @return El resultado de la multiplicación.
      */
     public double multiplicar() {
-        resultado = operando1 * operando2;
-        return resultado;
+        total = operando1 * operando2;
+        return total;
     }
 
     /**
@@ -77,8 +77,8 @@ public class CalculadoraEjemplo {
      */
     public double dividir() {
         if (operando2 != 0) {
-            resultado = operando1 / operando2;
-            return resultado;
+            total = operando1 / operando2;
+            return total;
         } else {
             System.out.println("Error: División por cero.");
             return Double.NaN;
@@ -91,7 +91,7 @@ public class CalculadoraEjemplo {
      * @param operacion El nombre de la operación realizada.
      */
     public void mostrarResultado(String operacion) {
-        System.out.println("Resultado de la " + operacion + ": " + resultado);
+        System.out.println("Resultado de la " + operacion + ": " + total);
     }
 
     /**
@@ -100,7 +100,7 @@ public class CalculadoraEjemplo {
      * @return El resultado de la última operación.
      */
     public double getResultado() {
-        return resultado;
+        return total;
     }
 
     /**
@@ -111,7 +111,7 @@ public class CalculadoraEjemplo {
      */
     public static void main(String[] args) {
         // Crear objeto de CalculadoraEjemplo con valores de prueba
-        CalculadoraEjemplo calc = new CalculadoraEjemplo(10, 5);
+        CalculadoraEjemplo calc = new CalculadoraEjemplo(15, 5);
 
         // Realizar y mostrar cada operación
         calc.sumar();
